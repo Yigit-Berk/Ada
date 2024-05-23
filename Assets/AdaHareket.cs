@@ -5,10 +5,12 @@ using UnityEngine;
 public class AdaHareket : MonoBehaviour
 {
     [SerializeField] GameObject gemi;
+    [SerializeField] Canvas diyalog;
     // Start is called before the first frame update
     void Start()
     {
         gemi = this.gameObject;
+        diyalog = GetComponent<Canvas>();
     }
     
     // Update is called once per frame
@@ -23,8 +25,9 @@ public class AdaHareket : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Gemi"))
         {
+            diyalog.enabled = true;
             Debug.Log("ADA GÖrüldü");
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 
