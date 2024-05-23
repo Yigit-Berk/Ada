@@ -30,7 +30,7 @@ public class Hareket : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Merhaba Dünya");
+        //Debug.Log("Merhaba Dünya");
         rb = this.GetComponent<Rigidbody2D>();
         carpma = this.GetComponent<BoxCollider2D>();
 
@@ -48,7 +48,7 @@ public class Hareket : MonoBehaviour
     private void yatayHareket()
     {
         xYon = Input.GetAxisRaw("Horizontal");
-        Debug.Log(xYon);
+        //Debug.Log(xYon);
         rb.velocity = new Vector2(xYon * hiz,rb.velocity.y);
             //Input.GetButtonDown("Horizontal");
     }
