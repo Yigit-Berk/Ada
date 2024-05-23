@@ -39,5 +39,9 @@ public class Cod : MonoBehaviour
             can += 15;
             CanBari.value = can;
         }
+        if (can <=0)
+        {
+            Debug.Log("Karakter öldü");// ölünce gelicek kodlar.
+        }
     }
 }
