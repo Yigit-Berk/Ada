@@ -59,4 +59,14 @@ public class AdaHareket : MonoBehaviour
             diyalog.SetActive(false);
         }
     }
+
+    /*buton tarafýndan karar verilecek ada giriþ kodlarý*/
+    public void Ada1()
+    {
+
+    }
+    public void Ada2()
+    {
+
+    }
 }
