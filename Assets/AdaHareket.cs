@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class AdaHareket : MonoBehaviour
 {
-    [SerializeField] GameObject gemi;
+    [SerializeField] GameObject gemiyeCarpan;
+    [SerializeField] GameObject diyalog;
+    private bool adaDurum=true;
+    
     // Start is called before the first frame update
     void Start()
     {
-        gemi = this.gameObject;
+        gemiyeCarpan = this.gameObject;
     }
     
     // Update is called once per frame
     void Update()
     {
         //Ada Gemiye doðru yaklaþýr
-        gemi.transform.Translate(new Vector3(-1 * Time.deltaTime, 0, 0)); // Time.deltaTime kullanarak her frame'de -1 birim hareket et
+        adaHareket();
     }
 
     /*kinematic rigidbody'ye sahip olan Gemi ("Zemin katmaný") Tagli nesneye çarpma anýnda yapýlacaklar*/
@@ -24,7 +27,26 @@ public class AdaHareket : MonoBehaviour
         if (collision.gameObject.CompareTag("Gemi"))
         {
             Debug.Log("ADA GÖrüldü");
-            Destroy(gameObject);
+            adaDurum= false;
+            // Canvas'ý görünmez yap
+            if (diyalog != null)
+            {
+                diyalog.SetActive(true);
+            }
+
+        }
+    }
+
+    void adaHareket (){
+        if (adaDurum)
+        {
+            gemiyeCarpan.transform.Translate(new Vector3(-1 * Time.deltaTime, 0, 0)); 
+            // Time.deltaTime kullanarak her frame'de -1 birim hareket et
+        }
+        else
+        {
+            //ada dursun
+            gemiyeCarpan.transform.Translate(new Vector3(0, 0, 0));
         }
     }
 
