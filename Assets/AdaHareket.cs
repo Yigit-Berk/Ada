@@ -6,7 +6,7 @@ public class AdaHareket : MonoBehaviour
 {
     [SerializeField] GameObject gemiyeCarpan;
     [SerializeField] GameObject diyalog;
-    private bool adaDurum=true;
+    public bool adaDurum=true;
     
     // Start is called before the first frame update
     void Start()
@@ -37,7 +37,7 @@ public class AdaHareket : MonoBehaviour
         }
     }
 
-    void adaHareket (){
+     void adaHareket (){
         if (adaDurum)
         {
             gemiyeCarpan.transform.Translate(new Vector3(-1 * Time.deltaTime, 0, 0)); 
@@ -49,5 +49,14 @@ public class AdaHareket : MonoBehaviour
             gemiyeCarpan.transform.Translate(new Vector3(0, 0, 0));
         }
     }
-
+    
+    public void AdaDurumTrue()
+    {
+        adaDurum= true;
+        // Canvas'ý görünmez yap
+        if (diyalog != null)
+        {
+            diyalog.SetActive(false);
+        }
+    }
 }
