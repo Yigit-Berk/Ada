@@ -9,10 +9,12 @@ public class Sandik : MonoBehaviour
     public string Diyalog;
     public TextMeshProUGUI textI;
     private bool oyuncuYakinda = false;
+    public GameObject canIksiriPrefab; // Can iksiri prefabı
+    private bool sandikAcildi = false; // Sandık açıldı mı kontrol et 
 
     private void Update()
     {
-        if (oyuncuYakinda && Input.GetKeyDown(KeyCode.F))
+        if (oyuncuYakinda && Input.GetKeyDown(KeyCode.F) && !sandikAcildi)
         {
             SandikAcKapa();
         }
@@ -41,12 +43,16 @@ public class Sandik : MonoBehaviour
 
     private void SandikAcKapa()
     {
+        sandikAcildi = true; // Sandık artık açıldı
+
         bool acikMi = anim.GetBool("acikMi");
         anim.SetBool("acikMi", !acikMi);
 
         if (!acikMi)
         {
             Debug.Log("Sandık açıldı");
+            Vector3 spawnPosition = transform.position + Vector3.up*2; // Sandık transformunun pozisyonuna iki birim yukarısına spawn et
+            Instantiate(canIksiriPrefab, spawnPosition, Quaternion.identity); // Can iksirini oluştur
         }
         else
         {
