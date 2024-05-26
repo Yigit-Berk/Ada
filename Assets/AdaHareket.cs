@@ -9,7 +9,12 @@ public class AdaHareket : MonoBehaviour
     [SerializeField] GameObject diyalog;
     public bool adaDurum=true;
     public string aktifAdaSahnesi;
-    
+
+    private void Awake()
+    {
+        diyalog.SetActive(false);//oluþturulma anýnda görünmez olsun
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +49,7 @@ public class AdaHareket : MonoBehaviour
     }
 
      void adaHareket (){
+
         if (adaDurum)
         {
             gemiyeCarpan.transform.Translate(new Vector3(-1 * Time.deltaTime, 0, 0)); 
@@ -52,7 +58,7 @@ public class AdaHareket : MonoBehaviour
         else
         {
             //ada dursun
-            gemiyeCarpan.transform.Translate(new Vector3(0, 0, 0));
+            gemiyeCarpan.transform.Translate(Vector3.zero);
         }
     }
     
@@ -64,7 +70,8 @@ public class AdaHareket : MonoBehaviour
         {
             diyalog.SetActive(false);
         }
-        //indis++;
+        
+
 
     }
 
