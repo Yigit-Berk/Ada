@@ -980,7 +980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9339623, g: 0.85709023, b: 0.58592916, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6377,7 +6377,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 0}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -7217,7 +7217,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 208, y: -238}
+  m_AnchoredPosition: {x: -602, y: -289}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1766495536
@@ -7232,11 +7232,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 584243c730d098d4b95e003906b5c5a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterIcon: {fileID: 1221145653}
-  characterName: {fileID: 768930338}
-  dialogueArea: {fileID: 1227089631}
-  isDialogueActive: 0
-  typingSpeed: 0.1
+  karakterIcon: {fileID: 1221145653}
+  karakterAdi: {fileID: 768930338}
+  diyalogYazisi: {fileID: 1227089631}
+  diyalogGorunum: {fileID: 1766495534}
+  diyalogAktiflik: 0
+  yaziHizi: 0.1
   animator: {fileID: 0}
 --- !u!1 &1878859923
 GameObject:
@@ -7612,8 +7613,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1766495536}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: DisplayNextDialogueLine
+        m_TargetAssemblyTypeName: DiyalogYonetimi, Assembly-CSharp
+        m_MethodName: SonrakiDiyaloguGoster
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7671,9 +7672,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2086090161}
   - component: {fileID: 2086090160}
-  - component: {fileID: 2086090159}
   - component: {fileID: 2086090162}
   - component: {fileID: 2086090163}
+  - component: {fileID: 2086090164}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -7681,32 +7682,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2086090159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2086090158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37d79b253678c554a8ae447f5daa6c8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    dialogueLines:
-    - character:
-        name: Baba
-        icon: {fileID: -7138200179886471756, guid: 76a59ef996c53c64bb48fae131d5727d, type: 3}
-      line: "K\u0131z\u0131m, k\u0131l\u0131\xE7 tutmay\u0131 ne zaman \xF6\u011Frendin?"
-    - character:
-        name: Player
-        icon: {fileID: 3522271655736287202, guid: dc96c8a234d9dcd4bb6e4083a56422cf, type: 3}
-      line: Genetik babba.
-    - character:
-        name: Baba
-        icon: {fileID: -7138200179886471756, guid: 76a59ef996c53c64bb48fae131d5727d, type: 3}
-      line: "Aferin ko\xE7um."
 --- !u!212 &2086090160
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7847,6 +7822,34 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2086090164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086090158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37d79b253678c554a8ae447f5daa6c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diyalog:
+    diyalogSatirlari:
+    - karakter:
+        isim: Baba
+        icon: {fileID: -7931493739616850253, guid: 76a59ef996c53c64bb48fae131d5727d, type: 3}
+      satir: "K\u0131z\u0131m, D karaktercisi yetene\u011Fini kullan\u0131p sa\u011Fa
+        gidebilir. A yetene\u011Fini kullan\u0131p sola hareket edebilirsin."
+    - karakter:
+        isim: "K\u0131z"
+        icon: {fileID: 4273057496792476570, guid: dc96c8a234d9dcd4bb6e4083a56422cf, type: 3}
+      satir: "Yak\u0131nlarda bir kutu var baba, o nedir?"
+    - karakter:
+        isim: Baba
+        icon: {fileID: -7931493739616850253, guid: 76a59ef996c53c64bb48fae131d5727d, type: 3}
+      satir: "Onlar\u0131n yak\u0131n\u0131na gidersen sana yol g\xF6sterecektir
+        k\u0131z\u0131m."
 --- !u!95 &2100251367 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6491913702539827632, guid: 7f2681b23c23afc4fbb43c6dca9f41f9, type: 3}
