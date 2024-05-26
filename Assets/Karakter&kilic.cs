@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class KarakterKontrol : MonoBehaviour
 {
     public GameObject kilicPrefab; // Kılıç prefabı
     public Transform elNoktasi; // Karakterin elini temsil eden nokta
+    public Animator animator; // Karakterin animator bileşeni
 
     private GameObject mevcutKilic; // Mevcut kılıç referansı
+    private bool saldiriyaHazir = true; // Saldırı yapmaya hazır mı kontrolü
 
     void Start()
     {
@@ -23,7 +26,24 @@ public class KarakterKontrol : MonoBehaviour
             return;
         }
 
+        if (animator == null)
+        {
+            Debug.LogError("Animator referansı atanmamış!");
+            return;
+        }
+
         KlicEkle(); // Oyunun başlangıcında kılıcı ekle
+    }
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && saldiriyaHazir) // Sol fare tıklamasını ve saldırıya hazır olduğunu kontrol et
+        {
+            Saldir();
+            saldiriyaHazir = true; // Saldırı yapıldığını işaretle
+            animator.SetBool("bekleme",true);
+            
+        }
     }
 
     void KlicEkle()
@@ -35,7 +55,9 @@ public class KarakterKontrol : MonoBehaviour
             Debug.Log("Mevcut kılıç yok edildi."); // Debug mesajı
         }
 
-        mevcutKilic = Instantiate(kilicPrefab, elNoktasi.position, elNoktasi.rotation); // Kılıcı oluştur
+        
+        Quaternion rotation = elNoktasi.rotation * Quaternion.Euler(0, 0, 0);
+        mevcutKilic = Instantiate(kilicPrefab, elNoktasi.position, rotation); // Kılıcı oluştur
         mevcutKilic.transform.SetParent(elNoktasi); // Kılıcı el noktasına child olarak ekle
 
         // Kılıcın aktif olup olmadığını kontrol et
@@ -47,4 +69,15 @@ public class KarakterKontrol : MonoBehaviour
 
         Debug.Log("Kılıç instantiate edildi ve el noktasına eklendi."); // Debug mesajı
     }
+
+    void Saldir()
+{
+     Debug.Log("Saldir fonksiyonu çağrıldı."); // Debug mesajı
+    if (saldiriyaHazir)
+    {
+        animator.SetTrigger("Attack"); // Attack parametresini tetikle
+        saldiriyaHazir = false; // Saldırı yapıldığını işaretle
+    }
+    
+}
 }

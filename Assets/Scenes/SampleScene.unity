@@ -1751,6 +1751,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 142104827830559459, guid: 70387be04a3dba4428b899e3a877079a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1241569702}
+    - targetCorrespondingSourceObject: {fileID: 142104827830559459, guid: 70387be04a3dba4428b899e3a877079a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1241569703}
   m_SourcePrefab: {fileID: 100100000, guid: 70387be04a3dba4428b899e3a877079a, type: 3}
 --- !u!1 &768930336
 GameObject:
@@ -6812,6 +6815,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 400
   jumpforce: 300
+--- !u!114 &1241569703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241569695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbadadc08d6500c42bea4467af611159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kilicPrefab: {fileID: 1878859923}
+  elNoktasi: {fileID: 1356119981}
+  animator: {fileID: 1241569697}
 --- !u!1 &1242336160
 GameObject:
   m_ObjectHideFlags: 0
@@ -7126,6 +7144,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273650680}
   m_CullTransparentMesh: 1
+--- !u!4 &1356119981 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1570914981912428978, guid: 70387be04a3dba4428b899e3a877079a, type: 3}
+  m_PrefabInstance: {fileID: 742879505}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1481705652
 GameObject:
   m_ObjectHideFlags: 0
@@ -7326,9 +7349,9 @@ RectTransform:
   - {fileID: 1984595018}
   m_Father: {fileID: 1242336164}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -602, y: -289}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -110, y: -95}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1766495536
@@ -7349,7 +7372,6 @@ MonoBehaviour:
   diyalogGorunum: {fileID: 1766495534}
   diyalogAktiflik: 0
   yaziHizi: 0.1
-  animator: {fileID: 0}
 --- !u!1 &1878859923
 GameObject:
   m_ObjectHideFlags: 0
