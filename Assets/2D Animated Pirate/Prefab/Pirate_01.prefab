@@ -950,11 +950,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6719672cc24afb749900fb401ea38467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hiz: 8
-  ziplamaHiz: 10
+  hiz: 2
+  ziplamaHiz: 3
   katman:
     serializedVersion: 2
     m_Bits: 64
+  animasyonDurumu: {fileID: 925769034280347402}
 --- !u!1 &5650626339861270311
 GameObject:
   m_ObjectHideFlags: 0

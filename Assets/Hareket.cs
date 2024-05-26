@@ -14,16 +14,23 @@ public class Hareket : MonoBehaviour
     Rigidbody2D rb;
     BoxCollider2D carpma;
 
-    [SerializeField]Animator animasyonDurumu;
-    //SpriteRenderer goruntu;
+    [SerializeField] Animator animasyonDurumu;
+    // SpriteRenderer goruntu;
 
     private enum Durumlar
     {
-        bekleme,
-        kosma,
-        dusme,
-        ziplama
+        bekleme = 0,
+        kosma = 1,
+        ziplama = 2,
+        yürüme=3,
+        hasar = 4,
+        kilicAtak = 5,
+        tabancaAtak = 6,
+        yenilgi = 7
+        
     }
+
+    private Durumlar mevcutDurum;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +38,9 @@ public class Hareket : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
         carpma = this.GetComponent<BoxCollider2D>();
         animasyonDurumu = this.GetComponent<Animator>();
-        //goruntu = this.GetComponent<SpriteRenderer>();
+        mevcutDurum = Durumlar.bekleme;
+        xYon = Input.GetAxisRaw("Horizontal");
+        animasyonDurumu.SetFloat("Speed",Mathf.Abs(xYon));
     }
 
     // Update is called once per frame
@@ -44,7 +53,6 @@ public class Hareket : MonoBehaviour
 
     private void yatayHareket()
     {
-        xYon = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(xYon * hiz, rb.velocity.y);
     }
 
@@ -63,27 +71,22 @@ public class Hareket : MonoBehaviour
 
     private void AnimasyonDurumlari()
     {
-        Durumlar durumEnum;
+        Durumlar yeniDurum = Durumlar.bekleme; // Varsayılan durumu bekleme olarak ayarlayın
 
-        if (xYon == 0)
+        if (!YerdeMi())
         {
-            durumEnum = Durumlar.bekleme; // 0
+            yeniDurum = Durumlar.ziplama; // Zıplama durumu
         }
-        else
+        else if (xYon != 0)
         {
-            durumEnum = Durumlar.kosma; // 1
-            //goruntu.flipX = xYon < 0;
-        }
-
-        if (rb.velocity.y > 0.1f)
-        {
-            durumEnum = Durumlar.ziplama; // 3
-        }
-        else if (rb.velocity.y < -0.1f)
-        {
-            durumEnum = Durumlar.dusme; // 2
+            yeniDurum = Durumlar.yürüme; // Koşma durumu
         }
 
-        animasyonDurumu.SetInteger("Durum", (int)durumEnum);
+        // Animasyon durumunu sadece değiştiğinde güncelle
+        if (mevcutDurum != yeniDurum)
+        {
+            mevcutDurum = yeniDurum;
+            animasyonDurumu.SetInteger("Durum", (int)mevcutDurum);
+        }
     }
 }
