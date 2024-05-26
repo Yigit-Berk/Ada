@@ -8,19 +8,14 @@ public class AdaHareket : MonoBehaviour
     public GameObject gemiyeCarpan;
     [SerializeField] GameObject diyalog;
     public bool adaDurum=true;
-    public string[] aktifAdaSahnesi;
-    private int indis=0;
+    public string aktifAdaSahnesi;
     
     // Start is called before the first frame update
     void Start()
     {
         gemiyeCarpan = this.gameObject;
-        aktifAdaSahnesi = new string[4];
-        aktifAdaSahnesi[0] = this.gameObject.name;//çarpan nesnenin adýný ata
-        aktifAdaSahnesi[1] = "ada2";
-        aktifAdaSahnesi[2] = "ada3";
-        aktifAdaSahnesi[3] = "ada4";
-
+        aktifAdaSahnesi = this.gameObject.name;//çarpan nesnenin adýný ata
+        
     }
     
     // Update is called once per frame
@@ -36,7 +31,7 @@ public class AdaHareket : MonoBehaviour
         
         if (collision.gameObject.CompareTag("Gemi"))
         {
-            aktifAdaSahnesi[0] = this.gameObject.name;//çarpan nesnenin adýný ata
+            aktifAdaSahnesi = this.gameObject.name;//çarpan nesnenin adýný ata
             //Debug.Log("ADA GÖrüldü");
             adaDurum = false;
             // Canvas'ý görünmez yap
@@ -76,7 +71,7 @@ public class AdaHareket : MonoBehaviour
     public void ButonEvet()
     {
         Debug.Log("Evet Tuþlandý");
-        Debug.Log(aktifAdaSahnesi[0].ToString());
+        Debug.Log(aktifAdaSahnesi.ToString());
 
         adaDurum = true;
         // Canvas'ý görünmez yap
@@ -88,7 +83,7 @@ public class AdaHareket : MonoBehaviour
 
 
         //SceneManager.LoadScene(aktifAdaSahnesi[0]);//ada adýna göre sahneyi yükler
-        Debug.Log(aktifAdaSahnesi[0]);
+        Debug.Log(aktifAdaSahnesi);
     }
 
     /*buton tarafýndan karar verilecek ada giriþ kodlarý*/
@@ -96,7 +91,7 @@ public class AdaHareket : MonoBehaviour
     private void SonrakiBolum()
     {
         //SceneManager.LoadScene(aktifAdaSahnesi[indis]);
-        SceneManager.LoadScene(aktifAdaSahnesi[0]);
+        SceneManager.LoadScene(aktifAdaSahnesi);
 
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         //SceneManager.GetActiveScene().ToString();
