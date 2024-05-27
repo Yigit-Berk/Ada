@@ -1754,6 +1754,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 142104827830559459, guid: 70387be04a3dba4428b899e3a877079a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1241569703}
+    - targetCorrespondingSourceObject: {fileID: 142104827830559459, guid: 70387be04a3dba4428b899e3a877079a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1241569704}
   m_SourcePrefab: {fileID: 100100000, guid: 70387be04a3dba4428b899e3a877079a, type: 3}
 --- !u!1 &768930336
 GameObject:
@@ -6830,6 +6833,18 @@ MonoBehaviour:
   kilicPrefab: {fileID: 1878859923}
   elNoktasi: {fileID: 1356119981}
   animator: {fileID: 1241569697}
+--- !u!114 &1241569704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241569695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd4064655751fb94e9f55fbd472b1f24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1242336160
 GameObject:
   m_ObjectHideFlags: 0
