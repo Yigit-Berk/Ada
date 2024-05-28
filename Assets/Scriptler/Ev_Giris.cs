@@ -7,12 +7,14 @@ using UnityEngine.SceneManagement;
 public class Ev_Giris : MonoBehaviour
 {
      public TextMeshProUGUI enterHouseText; // UI TextMeshPro öğesini buraya sürükleyin.
+     public TextMeshProUGUI enterHouseText2;
     private bool isPlayerInside = false;
 
     void Start()
     {
         // TextMeshPro nesnesini başlangıçta gizli hale getirin
         enterHouseText.gameObject.SetActive(false);
+        enterHouseText2.gameObject.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -23,6 +25,7 @@ public class Ev_Giris : MonoBehaviour
             Debug.Log("Eve gir");
             // UI TextMeshPro nesnesini görünür yapın
             enterHouseText.gameObject.SetActive(true);
+            enterHouseText2.gameObject.SetActive(true);
         }
     }
 
@@ -33,6 +36,7 @@ public class Ev_Giris : MonoBehaviour
             isPlayerInside = false;
             // UI TextMeshPro nesnesini tekrar gizleyin
             enterHouseText.gameObject.SetActive(false);
+            enterHouseText2.gameObject.SetActive(false);
         }
     }
 
@@ -50,6 +54,7 @@ public class Ev_Giris : MonoBehaviour
         Debug.Log("Karakter eve girdi.");
         // UI TextMeshPro nesnesini tekrar gizleyin
         enterHouseText.gameObject.SetActive(false);
+        enterHouseText2.gameObject.SetActive(false);
         SceneManager.LoadScene(2);
     }
 

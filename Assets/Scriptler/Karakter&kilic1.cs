@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Karakter_Kilic : MonoBehaviour
+public class Karakter_Kilic1 : MonoBehaviour
 {
-    public static Karakter_Kilic Instance;
+    public static Karakter_Kilic1 Instance;
     public GameObject kilicPrefab; // Kılıç prefabı
     public Transform elNoktasi; // Karakterin elini temsil eden nokta
     public Animator animator; // Karakterin animator bileşeni
@@ -42,7 +42,7 @@ public class Karakter_Kilic : MonoBehaviour
             return;
         }
 
-        //KlicEkle(); // Oyunun başlangıcında kılıcı ekle
+        KlicEkle(); // Oyunun başlangıcında kılıcı ekle
     }
 
     void Update()

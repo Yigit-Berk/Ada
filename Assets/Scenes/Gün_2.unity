@@ -2034,11 +2034,16 @@ PrefabInstance:
       addedObject: {fileID: 1241569702}
     - targetCorrespondingSourceObject: {fileID: 142104827830559459, guid: 70387be04a3dba4428b899e3a877079a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1241569703}
+      addedObject: {fileID: 1241569704}
     - targetCorrespondingSourceObject: {fileID: 142104827830559459, guid: 70387be04a3dba4428b899e3a877079a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1241569704}
+      addedObject: {fileID: 1241569705}
   m_SourcePrefab: {fileID: 100100000, guid: 70387be04a3dba4428b899e3a877079a, type: 3}
+--- !u!4 &742879507 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1570914981912428978, guid: 70387be04a3dba4428b899e3a877079a, type: 3}
+  m_PrefabInstance: {fileID: 742879505}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &768930336
 GameObject:
   m_ObjectHideFlags: 0
@@ -2434,6 +2439,10 @@ PrefabInstance:
     - target: {fileID: 6930122694965717508, guid: 7f2681b23c23afc4fbb43c6dca9f41f9, type: 3}
       propertyPath: m_Name
       value: PF Village Props - Chest Silver
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930122694965717508, guid: 7f2681b23c23afc4fbb43c6dca9f41f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6930122694965717509, guid: 7f2681b23c23afc4fbb43c6dca9f41f9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6812,7 +6821,7 @@ Transform:
   m_GameObject: {fileID: 1156921904}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.228106, y: 3.078085, z: -12.818996}
+  m_LocalPosition: {x: -5.46, y: 11.49, z: -12.818996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7420,21 +7429,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 400
   jumpforce: 300
---- !u!114 &1241569703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1241569695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbadadc08d6500c42bea4467af611159, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  kilicPrefab: {fileID: 1878859923}
-  elNoktasi: {fileID: 1356119981}
-  animator: {fileID: 1241569697}
 --- !u!114 &1241569704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7447,6 +7441,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd4064655751fb94e9f55fbd472b1f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1241569705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241569695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e9d0094e33cb594898f16ccc8d38d02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kilicPrefab: {fileID: 1878859923}
+  elNoktasi: {fileID: 742879507}
+  animator: {fileID: 1241569697}
 --- !u!1 &1242336160
 GameObject:
   m_ObjectHideFlags: 0
@@ -7761,11 +7770,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273650680}
   m_CullTransparentMesh: 1
---- !u!4 &1356119981 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1570914981912428978, guid: 70387be04a3dba4428b899e3a877079a, type: 3}
-  m_PrefabInstance: {fileID: 742879505}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1481705652
 GameObject:
   m_ObjectHideFlags: 0
