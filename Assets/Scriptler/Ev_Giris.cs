@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Ev_Giris : MonoBehaviour
 {
@@ -45,10 +46,11 @@ public class Ev_Giris : MonoBehaviour
 
     void EnterHouseFunction()
     {
-        // Eve girme işlemini burada tanımlayın
+        // Eve girme animasyonu çağır!
         Debug.Log("Karakter eve girdi.");
         // UI TextMeshPro nesnesini tekrar gizleyin
         enterHouseText.gameObject.SetActive(false);
+        SceneManager.LoadScene(2);
     }
 
 
