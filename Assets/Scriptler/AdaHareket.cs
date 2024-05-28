@@ -12,34 +12,34 @@ public class AdaHareket : MonoBehaviour
 
     private void Awake()
     {
-        diyalog.SetActive(false);//oluþturulma anýnda görünmez olsun
+        diyalog.SetActive(false);//oluï¿½turulma anï¿½nda gï¿½rï¿½nmez olsun
     }
 
     // Start is called before the first frame update
     void Start()
     {
         gemiyeCarpan = this.gameObject;
-        aktifAdaSahnesi = this.gameObject.name;//çarpan nesnenin adýný ata
+        aktifAdaSahnesi = this.gameObject.name;//ï¿½arpan nesnenin adï¿½nï¿½ ata
         
     }
     
     // Update is called once per frame
     void Update()
     {
-        //Ada Gemiye doðru yaklaþýr
+        //Ada Gemiye doï¿½ru yaklaï¿½ï¿½r
         adaHareket();
     }
 
-    /*kinematic rigidbody'ye sahip olan Gemi ("Zemin katmaný") Tagli nesneye çarpma anýnda yapýlacaklar*/
-    private void OnCollisionEnter2D(Collision2D collision)//çarpýþma anýnda
+    /*kinematic rigidbody'ye sahip olan Gemi ("Zemin katmanï¿½") Tagli nesneye ï¿½arpma anï¿½nda yapï¿½lacaklar*/
+    private void OnCollisionEnter2D(Collision2D collision)//ï¿½arpï¿½ï¿½ma anï¿½nda
     {
         
         if (collision.gameObject.CompareTag("Gemi"))
         {
-            aktifAdaSahnesi = this.gameObject.name;//çarpan nesnenin adýný ata
-            //Debug.Log("ADA GÖrüldü");
+            aktifAdaSahnesi = this.gameObject.name;//ï¿½arpan nesnenin adï¿½nï¿½ ata
+            //Debug.Log("ADA Gï¿½rï¿½ldï¿½");
             adaDurum = false;
-            // Canvas'ý görünmez yap
+            // Canvas'ï¿½ gï¿½rï¿½nmez yap
             if (diyalog != null)
             {
                 diyalog.SetActive(true);
@@ -62,10 +62,10 @@ public class AdaHareket : MonoBehaviour
         }
     }
     
-    public void ButonHayýr()
+    public void ButonHayir()
     {
         adaDurum= true;
-        // Canvas'ý görünmez yap
+        // Canvas'ï¿½ gï¿½rï¿½nmez yap
         if (diyalog != null)
         {
             diyalog.SetActive(false);
@@ -77,23 +77,23 @@ public class AdaHareket : MonoBehaviour
 
     public void ButonEvet()
     {
-        Debug.Log("Evet Tuþlandý");
+        Debug.Log("Evet Tuï¿½landï¿½");
         Debug.Log(aktifAdaSahnesi.ToString());
 
         adaDurum = true;
-        // Canvas'ý görünmez yap
+        // Canvas'ï¿½ gï¿½rï¿½nmez yap
         if (diyalog != null)
         {
             diyalog.SetActive(false);
         }
-        //SceneManager.LoadScene(aktifAdaSahnesi[indis]);//indise göre ada sahnesine git
+        //SceneManager.LoadScene(aktifAdaSahnesi[indis]);//indise gï¿½re ada sahnesine git
 
 
-        //SceneManager.LoadScene(aktifAdaSahnesi[0]);//ada adýna göre sahneyi yükler
+        //SceneManager.LoadScene(aktifAdaSahnesi[0]);//ada adï¿½na gï¿½re sahneyi yï¿½kler
         Debug.Log(aktifAdaSahnesi);
     }
 
-    /*buton tarafýndan karar verilecek ada giriþ kodlarý*/
+    /*buton tarafï¿½ndan karar verilecek ada giriï¿½ kodlarï¿½*/
 
     private void SonrakiBolum()
     {

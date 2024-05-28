@@ -2162,7 +2162,7 @@ GameObject:
   - component: {fileID: 1041286965}
   m_Layer: 6
   m_Name: Zemin
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
