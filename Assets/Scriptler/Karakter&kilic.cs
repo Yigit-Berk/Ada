@@ -42,7 +42,7 @@ public class Karakter_Kilic : MonoBehaviour
             return;
         }
 
-       // KlicEkle(); // Oyunun başlangıcında kılıcı ekle
+        KlicEkle(); // Oyunun başlangıcında kılıcı ekle
     }
 
     void Update()

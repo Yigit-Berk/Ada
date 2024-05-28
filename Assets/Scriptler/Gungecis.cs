@@ -19,7 +19,7 @@ public class Gungecis : MonoBehaviour
         anim.SetTrigger("Start");
         yield return new WaitForSeconds(1f);
         Scene scene = SceneManager.GetActiveScene();
-        int nextLevelBuildIndex = 1;
+        int nextLevelBuildIndex = 3;
         SceneManager.LoadScene(nextLevelBuildIndex);
 
 
