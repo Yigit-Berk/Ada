@@ -1007,7 +1007,7 @@ Transform:
   m_GameObject: {fileID: 311019699}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.62, y: -4.63, z: 0}
+  m_LocalPosition: {x: -11.54, y: -4.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6615,6 +6615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enterHouseText: {fileID: 183232308}
+  enterHouseText2: {fileID: 0}
 --- !u!1 &1122144017
 GameObject:
   m_ObjectHideFlags: 0
@@ -8751,7 +8752,7 @@ Transform:
   m_GameObject: {fileID: 1878859923}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: -12.81, y: -6.3, z: 0}
+  m_LocalPosition: {x: -10.55, y: -7.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

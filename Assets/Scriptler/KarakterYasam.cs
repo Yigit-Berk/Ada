@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Sonradan Eklenilen Kütüphane
+//Sonradan Eklenilen Kï¿½tï¿½phane
 using UnityEngine.SceneManagement;
 
 //---------------------
@@ -25,14 +25,17 @@ public class Karakter_Yasam : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Tuzak"))
         {
+            
             karakterOlme();
+            
         }
     }
 
     private void karakterOlme()
     {
-        animasyonDurumu.SetTrigger("Ölme");
+        animasyonDurumu.SetTrigger("Ã–lÃ¼m");
         rb.bodyType = RigidbodyType2D.Static;
+
         YenidenBaslat();
     }
 

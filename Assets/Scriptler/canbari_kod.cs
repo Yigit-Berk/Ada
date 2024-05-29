@@ -20,7 +20,7 @@ public class Cod : MonoBehaviour
         CanBari.maxValue = 100;
         CanBari.minValue = 0;
         CanBari.value = can;
-        CanBari.wholeNumbers = true;// virgüllü deðerler almamasý için
+        CanBari.wholeNumbers = true;// virgï¿½llï¿½ deï¿½erler almamasï¿½ iï¿½in
         CanBari.fillRect.GetComponent<Image>().color = Color.red;
     }
 
@@ -29,19 +29,19 @@ public class Cod : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("20 birim can azaldý");
+            Debug.Log("20 birim can azaldï¿½");
             can -= 20;
             CanBari.value = can;
         }
         else if (Input.GetKeyDown(KeyCode.Return))
         {
-            Debug.Log("15 birim can arttý");
+            Debug.Log("15 birim can arttï¿½");
             can += 15;
             CanBari.value = can;
         }
         if (can <=0)
         {
-            Debug.Log("Karakter öldü");// ölünce gelicek kodlar.
+            Debug.Log("Karakter ï¿½ldï¿½");// ï¿½lï¿½nce gelicek kodlar.
         }
     }
 }
