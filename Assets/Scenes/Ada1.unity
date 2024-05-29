@@ -2625,6 +2625,8 @@ GameObject:
   m_Component:
   - component: {fileID: 999682538}
   - component: {fileID: 999682537}
+  - component: {fileID: 999682540}
+  - component: {fileID: 999682539}
   m_Layer: 0
   m_Name: Male4_24
   m_TagString: Untagged
@@ -2699,6 +2701,83 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &999682539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999682536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37d79b253678c554a8ae447f5daa6c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diyalog:
+    diyalogSatirlari:
+    - karakter:
+        isim: Yolcu
+        icon: {fileID: 2967879500316939536, guid: 6eedc78c635734143a7981e2f563c86b, type: 3}
+      satir: "Hey k\xFC\xE7\xFCk yolcu! neden buradas\u0131n?"
+    - karakter:
+        isim: "K\u0131z"
+        icon: {fileID: 21300002, guid: 29bbbd5ce2ca2984bb09a8ed1bee772d, type: 3}
+      satir: "Ailemi ar\u0131yorum, g\xFCnlerdir gemimle adalar\u0131 ar\u0131yorum.
+        Ailemi g\xF6rd\xFCn m\xFC?"
+    - karakter:
+        isim: Yolcu
+        icon: {fileID: 2967879500316939536, guid: 6eedc78c635734143a7981e2f563c86b, type: 3}
+      satir: "Ailen burada de\u011Fil. Ayr\u0131ca bu yollar senin i\xE7in \xE7ok
+        tehlikeli hemen evine d\xF6nmelisin!"
+    - karakter:
+        isim: "K\u0131z"
+        icon: {fileID: 21300002, guid: 29bbbd5ce2ca2984bb09a8ed1bee772d, type: 3}
+      satir: "Onlar\u0131 Aramay\u0131 asla b\u0131rakmayaca\u011F\u0131m!\n"
+--- !u!61 &999682540
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999682536}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 3}
+    newSize: {x: 2, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 3}
+  m_EdgeRadius: 0
 --- !u!1 &1041286959
 GameObject:
   m_ObjectHideFlags: 0
@@ -18794,11 +18873,11 @@ PrefabInstance:
       objectReference: {fileID: 286387844}
     - target: {fileID: 1858403485913688210, guid: 70387be04a3dba4428b899e3a877079a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 197.5
+      value: 9.07
       objectReference: {fileID: 0}
     - target: {fileID: 1858403485913688210, guid: 70387be04a3dba4428b899e3a877079a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.1
+      value: 2.22
       objectReference: {fileID: 0}
     - target: {fileID: 2546378725343059225, guid: 70387be04a3dba4428b899e3a877079a, type: 3}
       propertyPath: m_Layer
@@ -19350,7 +19429,6 @@ Transform:
   m_Children:
   - {fileID: 1041286960}
   - {fileID: 1480104}
-  - {fileID: 1935647551}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1238566321
@@ -20174,12 +20252,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 584243c730d098d4b95e003906b5c5a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  karakterIcon: {fileID: 0}
-  karakterAdi: {fileID: 0}
-  diyalogYazisi: {fileID: 0}
-  diyalogGorunum: {fileID: 0}
+  karakterIcon: {fileID: 1221145653}
+  karakterAdi: {fileID: 768930338}
+  diyalogYazisi: {fileID: 1227089631}
+  diyalogGorunum: {fileID: 1766495534}
   diyalogAktiflik: 0
-  yaziHizi: 0.2
+  yaziHizi: 0.1
 --- !u!1001 &1853429301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20257,190 +20335,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03c8cc3ee1f97e04c8065905fe345e2e, type: 3}
---- !u!1 &1935647550
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1935647551}
-  - component: {fileID: 1935647553}
-  - component: {fileID: 1935647552}
-  m_Layer: 0
-  m_Name: ArkaPlan
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1935647551
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1935647550}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -95.57, y: -1.02, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1237249086}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!483693784 &1935647552
-TilemapRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1935647550}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 6.326667, y: 6.326667, z: 0}
-  m_MaxChunkCount: 16
-  m_MaxFrameAge: 16
-  m_SortOrder: 0
-  m_Mode: 0
-  m_DetectChunkCullingBounds: 0
-  m_MaskInteraction: 0
---- !u!1839735485 &1935647553
-Tilemap:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1935647550}
-  m_Enabled: 1
-  m_Tiles:
-  - first: {x: 41, y: -7, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 46, y: -7, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 56, y: -7, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 66, y: -7, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  m_AnimatedTiles: {}
-  m_TileAssetArray:
-  - m_RefCount: 4
-    m_Data: {fileID: 11400000, guid: 81b8eb8575111904bb3597f6b0881658, type: 2}
-  m_TileSpriteArray:
-  - m_RefCount: 4
-    m_Data: {fileID: 21300000, guid: 1973b487f95e23640a9aec026e1bb261, type: 3}
-  m_TileMatrixArray:
-  - m_RefCount: 4
-    m_Data:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-  m_TileColorArray:
-  - m_RefCount: 4
-    m_Data: {r: 1, g: 1, b: 1, a: 1}
-  m_TileObjectToInstantiateArray: []
-  m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: 0, y: -7, z: 0}
-  m_Size: {x: 67, y: 7, z: 1}
-  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
-  m_TileOrientation: 0
-  m_TileOrientationMatrix:
-    e00: 1
-    e01: 0
-    e02: 0
-    e03: 0
-    e10: 0
-    e11: 1
-    e12: 0
-    e13: 0
-    e20: 0
-    e21: 0
-    e22: 1
-    e23: 0
-    e30: 0
-    e31: 0
-    e32: 0
-    e33: 1
 --- !u!1 &1974756846 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1900039408099082, guid: f7bd5a45c5d8f184796f92664e83ffdd, type: 3}
@@ -20604,8 +20498,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1766495536}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: DisplayNextDialogueLine
+        m_TargetAssemblyTypeName: DiyalogYonetimi, Assembly-CSharp
+        m_MethodName: SonrakiDiyaloguGoster
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
