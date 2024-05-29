@@ -1,18 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class NpcCan : MonoBehaviour
+public class NPCHealth : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int health = 100;
+
+    public void TakeDamage(int damage)
     {
-        
+        health -= damage;
+        if (health <= 0)
+        {
+            Die();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void Die()
     {
-        
+        // NPC'yi yok etme işlemi
+        Destroy(gameObject);
     }
 }

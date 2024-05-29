@@ -19575,6 +19575,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC1
       objectReference: {fileID: 0}
+    - target: {fileID: 1900039408099082, guid: f7bd5a45c5d8f184796f92664e83ffdd, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     - target: {fileID: 4014240130795952, guid: f7bd5a45c5d8f184796f92664e83ffdd, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -19634,6 +19638,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1900039408099082, guid: f7bd5a45c5d8f184796f92664e83ffdd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1974756848}
+    - targetCorrespondingSourceObject: {fileID: 1900039408099082, guid: f7bd5a45c5d8f184796f92664e83ffdd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1974756850}
+    - targetCorrespondingSourceObject: {fileID: 1900039408099082, guid: f7bd5a45c5d8f184796f92664e83ffdd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1974756851}
   m_SourcePrefab: {fileID: 100100000, guid: f7bd5a45c5d8f184796f92664e83ffdd, type: 3}
 --- !u!1 &1636090341
 GameObject:
@@ -20057,6 +20067,64 @@ MonoBehaviour:
   DusmanHareket:
   - {fileID: 772701567}
   - {fileID: 1636090342}
+--- !u!114 &1974756850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974756846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e99773ca02dd444d8690a1f20c5a2bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+--- !u!61 &1974756851
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974756846}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.035398886, y: -0.38956738}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9292022, y: 1.2996669}
+  m_EdgeRadius: 0
 --- !u!1 &1984595017
 GameObject:
   m_ObjectHideFlags: 0
@@ -20509,6 +20577,8 @@ GameObject:
   - component: {fileID: 2135957647}
   - component: {fileID: 2135957646}
   - component: {fileID: 2135957648}
+  - component: {fileID: 2135957649}
+  - component: {fileID: 2135957650}
   m_Layer: 0
   m_Name: Saber
   m_TagString: Untagged
@@ -20732,6 +20802,40 @@ PolygonCollider2D:
       - {x: 0.07219404, y: -0.11812683}
       - {x: 0.05505118, y: -0.1295554}
   m_UseDelaunayMesh: 0
+--- !u!114 &2135957649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135957645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43fb2ab711779fc4599e908df4c22406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
+--- !u!95 &2135957650
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135957645}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 55e2ab56ae594b24b8932feb619624be, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
