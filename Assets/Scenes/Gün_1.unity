@@ -7011,7 +7011,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 9009300007014026626, guid: dc96c8a234d9dcd4bb6e4083a56422cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -7032,7 +7032,7 @@ Transform:
   m_GameObject: {fileID: 1122144017}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.31895936, w: 0.9477684}
-  m_LocalPosition: {x: 1.65, y: 6.47, z: 0}
+  m_LocalPosition: {x: 1.89, y: 6.74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8950,7 +8950,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 15.5, y: 15.5, z: 0}
   m_MaxChunkCount: 16
