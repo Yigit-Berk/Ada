@@ -1,41 +1,54 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI; // Eğer Text bileşeni kullanıyorsanız
-//using TMPro; // Eğer TextMeshPro kullanıyorsanız
+
 
 public class ShowMessageOnTrigger : MonoBehaviour
 {
-    public GameObject messageUI; // UI Text veya TMP Text objesi
+     public TextMeshProUGUI messageUI; // UI Text veya TMP Text objesi
     private bool isPlayerInRange = false;
 
     void Start()
     {
-        messageUI.SetActive(false); // Başlangıçta mesajı gizle
+        messageUI.gameObject.SetActive(false);
     }
 
     void Update()
     {
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.F))
         {
-            // Buraya F tuşuna basıldığında yapılacak işlemleri ekleyebilirsiniz
-            Debug.Log("Not okunuyor...");
+            fonksiyon();
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player")) // Oyuncu karakterinizin tag'ı "Player" olmalı
-        {
-            messageUI.SetActive(true);
-            isPlayerInRange = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
+     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            messageUI.SetActive(false);
-            isPlayerInRange = false;
+            isPlayerInRange = true;
+            Debug.Log("Notu Oku");
+            // UI TextMeshPro nesnesini görünür yapın
+            messageUI.gameObject.SetActive(true);
         }
     }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isPlayerInRange = false;
+            // UI TextMeshPro nesnesini tekrar gizleyin
+            messageUI.gameObject.SetActive(false);
+        }
+    }
+
+    void fonksiyon()
+    {
+        // Not okuma işmei burada
+        Debug.Log("Karakter notu okudu.");
+        // UI TextMeshPro nesnesini tekrar gizleyin
+        messageUI.gameObject.SetActive(false);
+    }
+
+
 }
