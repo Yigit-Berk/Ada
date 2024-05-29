@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Sword : MonoBehaviour
 {
-    public int damage = 50; // Kılıcın vereceği hasar miktarı
+    public int damage = 100; // Kılıcın vereceği hasar miktarı
 
     void OnTriggerEnter2D(Collider2D other)
     {
