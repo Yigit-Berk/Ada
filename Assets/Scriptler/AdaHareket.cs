@@ -28,6 +28,7 @@ public class AdaHareket : MonoBehaviour
     {
         //Ada Gemiye do�ru yakla��r
         adaHareket();
+        
     }
 
     /*kinematic rigidbody'ye sahip olan Gemi ("Zemin katman�") Tagli nesneye �arpma an�nda yap�lacaklar*/
@@ -36,8 +37,10 @@ public class AdaHareket : MonoBehaviour
         
         if (collision.gameObject.CompareTag("Gemi"))
         {
-            aktifAdaSahnesi = this.gameObject.name;//�arpan nesnenin ad�n� ata
-            //Debug.Log("ADA G�r�ld�");
+            aktifAdaSahnesi = gemiyeCarpan.name;
+
+            Debug.Log("aktif sahne: "+aktifAdaSahnesi);
+
             adaDurum = false;
             // Canvas'� g�r�nmez yap
             if (diyalog != null)
@@ -78,7 +81,7 @@ public class AdaHareket : MonoBehaviour
     public void ButonEvet()
     {
         Debug.Log("Evet Tu�land�");
-        Debug.Log(aktifAdaSahnesi.ToString());
+        
 
         adaDurum = true;
         // Canvas'� g�r�nmez yap
@@ -88,9 +91,11 @@ public class AdaHareket : MonoBehaviour
         }
         //SceneManager.LoadScene(aktifAdaSahnesi[indis]);//indise g�re ada sahnesine git
 
+        aktifAdaSahnesi = null;
+        aktifAdaSahnesi = gemiyeCarpan.name;
+        SceneManager.LoadScene(aktifAdaSahnesi);//ada ad�na g�re sahneyi y�kler
 
-        //SceneManager.LoadScene(aktifAdaSahnesi[0]);//ada ad�na g�re sahneyi y�kler
-        Debug.Log(aktifAdaSahnesi);
+        Debug.Log("ol loooo ol"+aktifAdaSahnesi);
     }
 
     /*buton taraf�ndan karar verilecek ada giri� kodlar�*/
@@ -98,7 +103,7 @@ public class AdaHareket : MonoBehaviour
     private void SonrakiBolum()
     {
         //SceneManager.LoadScene(aktifAdaSahnesi[indis]);
-        SceneManager.LoadScene(aktifAdaSahnesi);
+        //SceneManager.LoadScene(aktifAdaSahnesi);
 
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         //SceneManager.GetActiveScene().ToString();
