@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DusmanYurume : MonoBehaviour
 {
-    // Start is called before the first frame update
+   
 
     public float hiz;
 
@@ -19,7 +19,7 @@ public class DusmanYurume : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         transform.position = Vector2.MoveTowards(
