@@ -2,12 +2,11 @@ using UnityEngine;
 
 public class Sword : MonoBehaviour
 {
-    public int damage = 25; // Kılıcın vereceği hasar miktarı
-    private bool isCheckingCollision = false;
+    public int damage = 50; // Kılıcın vereceği hasar miktarı
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (isCheckingCollision && other.CompareTag("NPC"))
+        if (other.CompareTag("NPC"))
         {
             NPCHealth npcHealth = other.GetComponent<NPCHealth>();
             if (npcHealth != null)
@@ -15,19 +14,5 @@ public class Sword : MonoBehaviour
                 npcHealth.TakeDamage(damage);
             }
         }
-    }
-
-    // Animasyon olayı tarafından çağrılacak işlev
-    public void StartCheckingCollision()
-    {
-        isCheckingCollision = true;
-        Debug.Log("Çarpışma algılama başladı.");
-    }
-
-    // Animasyon olayı tarafından çağrılacak işlev
-    public void StopCheckingCollision()
-    {
-        isCheckingCollision = false;
-        Debug.Log("Çarpışma algılama durduruldu.");
     }
 }
