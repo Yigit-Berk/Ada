@@ -51,19 +51,12 @@ public class SandikCan : MonoBehaviour
         if (!acikMi)
         {
             Debug.Log("Sandık açıldı");
-            Vector3 spawnPosition = transform.position + Vector3.up * 2; // Sandık transformunun pozisyonuna iki birim yukarısına spawn et
+            Vector3 spawnPosition = transform.position + Vector3.up*2; // Sandık transformunun pozisyonuna iki birim yukarısına spawn et
             Instantiate(odul, spawnPosition, Quaternion.identity); // Can iksirini oluştur
-            /*
-            // Oyuncunun canını artır
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            if (player != null)
-            {
-                canbari_kod playerHealth = player.GetComponent<canbari_kod>();
-                if (playerHealth != null)
-                {
-                    playerHealth.Heal(30); // Oyuncunun canını 30 artır
-                }
-            }*/
+
+            Karakter_Kilic.Instance.KlicEkle();//diğer scripte eriş kılıç ekle
+            
+
         }
         else
         {
