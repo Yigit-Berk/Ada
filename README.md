@@ -4,9 +4,9 @@ Bu proje, Unity ve C# kullanılarak geliştirilmiş bir aksiyon-macera oyunudur.
 # Geliştirilme Aşaması
 Projenin geliştirilme aşamalarında oyun karakteri, düşmanlar, NPC'lerin tümü ücretsiz assetler yardımı ile oluşturulmuştur. Bunlar dışındaki tüm ada tasarımları, papağan, gemi gibi pek çok öge pixel-art programları aracılığıyla, tüm proje geliştiricilerinin katkılarıyla çizilip oyuna entegre edilmiştir. 
 
-# Seviye ve Oyun Tasarınmları
+# Seviye ve Oyun Tasarımları
 
-Ada1 ve Diyalog Tasarımları
+Ada 1 ve Diyalog Tasarımları
 ![image](https://github.com/user-attachments/assets/9ddddf19-243b-493c-b9c8-2bd3488fab53)
 
 ![image](https://github.com/user-attachments/assets/bae590c5-9e7f-4140-9bb6-5920d9439eb9)
